@@ -10,12 +10,14 @@
 
 import React from 'react';
 import {NativeBaseProvider} from 'native-base';
-import Home from './src/screens/Home';
+// import Home from './src/screens/Home';
+
+import OTP from './src/screens/OTP';
 
 const App = () => {
   return (
     <NativeBaseProvider>
-      <Home />
+      <OTP />
     </NativeBaseProvider>
   );
 };
