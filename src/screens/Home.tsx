@@ -5,8 +5,8 @@ import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <VStack space="2" safeArea>
-      <VStack p="4" shadow="1" background="white">
+    <VStack space="2">
+      <VStack p="4" shadow="0" background="white">
         <Header />
         <Text>
           Now you can buy fresh fruits and veggies directly from local farmers

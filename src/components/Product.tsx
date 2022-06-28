@@ -10,7 +10,7 @@ interface ProductProps {
 
 const Product: FC<ProductProps> = ({name, description, price = 100, image}) => {
   return (
-    <VStack background="white" p="4" borderRadius="lg" mt="4" space="2">
+    <VStack background="white" p="4" borderRadius="lg" mt="2" space="4">
       <VStack space="1">
         <Image
           source={{
@@ -24,6 +24,7 @@ const Product: FC<ProductProps> = ({name, description, price = 100, image}) => {
         />
         <Heading size="sm">{name}</Heading>
         <Text color="gray.600">{description}</Text>
+
         <Heading size="lg">Rs {price}/-</Heading>
       </VStack>
       <Button onPress={() => console.log('hello world')} size="lg" py="3">

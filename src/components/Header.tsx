@@ -1,15 +1,10 @@
 import React from 'react';
 import {Heading, HStack, IconButton, Box, VStack, Badge} from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-interface ProductProps {
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-}
+import {useNavigation} from '@react-navigation/native';
 
 const Header = () => {
+  const navigation = useNavigation();
   return (
     <HStack alignItems="center" justifyContent="space-between">
       <Heading>Freshly</Heading>
@@ -33,6 +28,7 @@ const Header = () => {
               <IconButton
                 size="lg"
                 variant={'ghost'}
+                onPress={() => navigation.navigate('Cart' as never)}
                 _icon={{
                   as: Ionicons,
                   name: 'cart',

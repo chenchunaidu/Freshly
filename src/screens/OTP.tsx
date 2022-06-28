@@ -1,21 +1,19 @@
 import React from 'react';
-import {Input, Center, Stack, FormControl, Button, HStack} from 'native-base';
+import {Input, Center, Stack, FormControl, Button} from 'native-base';
+import {useNavigation} from '@react-navigation/native';
 
 export default function OTP() {
+  const {navigate} = useNavigation();
   return (
     <Center safeArea h="full">
       <Stack space="4" w="full" p="4">
         <FormControl>
           <FormControl.Label>Enter OTP</FormControl.Label>
-          <HStack space="6">
-            <Input size="2xl" p="4" w="16%" />
-            <Input size="2xl" p="4" w="16%" />
-            <Input size="2xl" p="4" w="16%" />
-            <Input size="2xl" p="4" w="16%" />
-          </HStack>
+
+          <Input size="2xl" p="4" keyboardType={'numeric'} />
         </FormControl>
-        <Button onPress={() => console.log('hello world')} size="lg">
-          Click Me
+        <Button onPress={() => navigate('Home' as never)} size="lg">
+          Submit
         </Button>
       </Stack>
     </Center>
