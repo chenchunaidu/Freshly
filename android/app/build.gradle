@@ -221,3 +221,15 @@ task copyDownloadableDepsToLibs(type: Copy) {
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+ext {
+  compileSdkVersion   = 28
+  buildToolsVersion   = "28.0.3"
+  minSdkVersion       = 16
+  targetSdkVersion    = 28
+
+  // Any of the following will work
+  googlePlayServicesVersion      = "17.0.0"
+  // playServicesVersion         = "17.0.0"
+  // playServicesLocationVersion = "17.0.0"
+}
